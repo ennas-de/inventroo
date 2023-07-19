@@ -1,0 +1,19 @@
+[33mcommit dac494b8cc2ba319baaf0802e6a5d6acb061c0bf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Abdulhakeem <dev.abdulhakeem@gmail.com>
+Date:   Sun Jul 16 08:10:20 2023 +0100
+
+    Update api.js
+
+[1mdiff --git a/ui/src/redux/api/api.js b/ui/src/redux/api/api.js[m
+[1mindex d6631a1..5cc4175 100644[m
+[1m--- a/ui/src/redux/api/api.js[m
+[1m+++ b/ui/src/redux/api/api.js[m
+[36m@@ -1,3 +1,7 @@[m
+[31m-const API = "http://localhost:3001/api/v1";[m
+[32m+[m[32m// Production Server[m
+[32m+[m[32mconst API = "https://mernify-xlb0.onrender.com/api/v1"[m
+[32m+[m
+[32m+[m[32m// Development Server[m
+[32m+[m[32m// const API = "http://localhost:3001/api/v1";[m
+ [m
+ export default API;[m
