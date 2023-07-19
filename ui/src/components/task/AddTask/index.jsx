@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { generatePath, Link } from "react-router-dom";
+import { generatePath, Link, useNavigate } from "react-router-dom";
 import { createTask } from "../../../redux/features/task/taskActions";
 
 import "./AddTask.css";
@@ -8,6 +8,7 @@ import "./AddTask.css";
 const AddPost = () => {
   // hooks
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // local state
   const [title, setTitle] = useState("");
@@ -20,9 +21,10 @@ const AddPost = () => {
 
   useEffect(() => {
     if (status === "success" && message === "New task created!") {
-      window.location.replace(`/`);
+      // window.location.replace(`/`);
+      navigate("/");
     }
-  }, [status, message]);
+  }, [status, message, navigate]);
 
   const handleCreateTask = (e) => {
     e.preventDefault();
