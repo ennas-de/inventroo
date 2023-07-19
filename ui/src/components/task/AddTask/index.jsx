@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { generatePath, Link } from "react-router-dom";
-import { createPost } from "../../../redux/features/post/postActions";
+import { createTask } from "../../../redux/features/task/taskActions";
 
-import "./AddPost.css";
+import "./AddTask.css";
 
 const AddPost = () => {
   // hooks
@@ -11,42 +11,42 @@ const AddPost = () => {
 
   // local state
   const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
+  const [description, setDescription] = useState("");
 
-  const { user } = useSelector((state) => state.auth);
-  const userId = user._id;
+  // const { user } = useSelector((state) => state.auth);
+  // const userId = user._id;
 
-  const { status, message, loading } = useSelector((state) => state.post);
+  const { status, message, loading } = useSelector((state) => state.task);
 
   useEffect(() => {
-    if (status === "success" && message === "New post created!") {
-      window.location.replace(`/dashboard/posts/${userId}`);
+    if (status === "success" && message === "New task created!") {
+      window.location.replace(`/`);
     }
   }, [status, message]);
 
-  const handleCreatePost = (e) => {
+  const handleCreateTask = (e) => {
     e.preventDefault();
 
-    console.log(title, body);
-    dispatch(createPost({ title, body }));
-    console.log("Creating post");
+    console.log(title, description);
+    dispatch(createTask({ title, description }));
+    console.log("Creating task");
   };
 
-  const postPath = generatePath(`/dashboard/posts/`); // Generate the dynamic path
+  const taskPath = generatePath(`/`); // Generate the dynamic path
 
   return (
     <div>
       {loading ? (
         <div>
-          <p>Loading posts...</p>
+          <p>Loading tasks...</p>
         </div>
       ) : (
         <div>
-          <h2 className="heading">Add New Post</h2>
+          <h2 className="heading">Add New Task</h2>
 
           <div>
             <form
-              onSubmit={handleCreatePost}
+              onSubmit={handleCreateTask}
               style={{ alignItems: "center" }}
               className="mt-4">
               <input
@@ -60,18 +60,18 @@ const AddPost = () => {
               <br />
               <input
                 type="text"
-                name="body"
-                value={body}
+                name="description"
+                value={description}
                 className="input"
-                onChange={(e) => setBody(e.target.value)}
+                onChange={(e) => setDescription(e.target.value)}
                 placeholder="Enter some contents..."
               />
               <br />
 
-              <button className="button">Create Post</button>
+              <button className="button">Create Task</button>
             </form>
             <div className="mt-9">
-              <Link to={`${postPath}/${userId}`}>Posts</Link>
+              <Link to={`${taskPath}`}>Back to Tasks</Link>
             </div>
           </div>
         </div>

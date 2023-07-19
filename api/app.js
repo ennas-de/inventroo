@@ -71,7 +71,7 @@ app.get("/api", (req, res) => {
   return res.send({
     status: "ok",
     message:
-      "Please do well to check out our UI through 'http://mernify.netlify.app'. Thanks.",
+      "Please do well to check out our UI through 'http://inventroo.netlify.app'. Thanks.",
   });
 });
 app.get("/api/v1", (req, res) => {

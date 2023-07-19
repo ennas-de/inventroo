@@ -3,7 +3,7 @@ import Register from "../pages/auth/Register";
 import Login from "../pages/auth/Login";
 import Home from "../pages/dashboard/Home";
 import Profile from "../pages/dashboard/Profile";
-import Post from "../pages/dashboard/Post";
+import Post from "../pages/dashboard/Task";
 
 const routes = [
   {

@@ -16,7 +16,7 @@ import rootReducer from "./../services/rootReducer";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["auth"], // blacklist to exclude "auth" from being persisted
+  whitelist: [], // blacklist to exclude "auth" from being persisted
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
