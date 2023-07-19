@@ -2,7 +2,6 @@
 import express from "express";
 import responseTime from "response-time";
 import cors from "cors";
-import xss from "xss-clean";
 import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
 import morgan from "morgan";
@@ -26,7 +25,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(helmet());
-app.use(xss());
 app.use(mongoSanitize());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -1,40 +1,31 @@
-/*  */
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light",
+    "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  flex: 1;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the content */
-.content {
-  background-color: #ddd;
-  padding: 10px;
-  height: 65vh;
   width: 100vw;
+  height: 100vh;
+  margin: auto;
 }
 
-/* do not delete */
+.container {
+  margin: 2rem 0;
+  width: 60%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* heading styles */
 .heading {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 
+/* input styles */
 .input {
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -44,8 +35,9 @@ body {
   width: 300px;
 }
 
+/* button styles */
 .button {
-  padding: 0.5rem 1rem;
+  padding: 0.49rem 0.9rem;
   margin: 1rem;
   background-color: #007bff;
   color: #fff;
@@ -59,8 +51,13 @@ body {
   background-color: #0056b3;
 }
 
-/* Style the footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
+.link {
+  padding: 0.75rem 2rem;
+  margin: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 150px;
 }

@@ -6,8 +6,7 @@ A full stack mern app created for the Inventroo Full Stack Role Interview.
 
 ## Live URL
 
-<!--
- -->
+https://inventrooo.netlify.app/
 
 # Technologies
 

@@ -76,7 +76,7 @@ const Task = () => {
     <div>
       <h2 className="heading">Task Component</h2>
 
-      <Link className="button" to="/add">
+      <Link className="link" to="/add">
         Add New Task
       </Link>
       <hr className="mt-5" />
@@ -93,7 +93,7 @@ const Task = () => {
               <p>Created Date: {formatPostedDate(task.createdAt)}</p>
             </div>
             <div className="mt-3 mb-3">
-              <Link className="button" to={`/edit/${task._id}`}>
+              <Link className="link" to={`/edit/${task._id}`}>
                 Edit Task
               </Link>
               <button

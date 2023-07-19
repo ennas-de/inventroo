@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import API from "../../api/api";
 import axios from "axios";
-import { updateTaskList } from "./taskSlice";
 
 // Thunk action to handle fetching Post data
 export const getTask = createAsyncThunk(

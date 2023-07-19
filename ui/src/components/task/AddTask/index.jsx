@@ -73,7 +73,9 @@ const AddPost = () => {
               <button className="button">Create Task</button>
             </form>
             <div className="mt-9">
-              <Link to={`${taskPath}`}>Back to Tasks</Link>
+              <Link className="underline" to={`${taskPath}`}>
+                Back to Tasks
+              </Link>
             </div>
           </div>
         </div>

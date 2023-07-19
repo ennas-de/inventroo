@@ -21,11 +21,13 @@ function App() {
     <div className="App">
       <div className="body">
         <Toaster />
-        <Routes>
-          <Route path="/" element={<Task />} />
-          <Route path="/edit/:taskId" element={<EditTask />} />
-          <Route path="/add" element={<AddTask />} />
-        </Routes>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Task />} />
+            <Route path="/edit/:taskId" element={<EditTask />} />
+            <Route path="/add" element={<AddTask />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );
